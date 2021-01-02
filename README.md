@@ -28,3 +28,9 @@ This project is based on the excellent course "Learn React for Modern Web Applic
 - Navigation Sidebar
 - Network Requests
 - Using the Children prop
+
+## React class-based Components for Comprehension, but never use for new development
+
+- Class-based components
+- Use-state within class-based components
+- Lifecycle events in class-based components
