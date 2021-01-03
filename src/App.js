@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage, ProtectedPage, ControlledFormPage, UncontrolledFormPage, UserProfilePage } from './pages'
 import { NavBar } from './NavBar';
 import { FormsNavBar } from './FormsNavBar';
+import { UserDataLoader } from './UserDataLoader';
 import './App.css';
 
 function App() {
@@ -26,7 +27,9 @@ function App() {
               <ProtectedPage />
             </Route>
             <Route path="/user">
-              <UserProfilePage />
+              <UserDataLoader>
+                <UserProfilePage />
+              </UserDataLoader>
             </Route>
             <Route path="/forms">
               <Router>

@@ -38,3 +38,4 @@ This project is based on the excellent course "Learn React for Modern Web Applic
 ## Clean React Code
 
 - Inheritance and Composition (don't do inheritance!)
+- SRP in React
