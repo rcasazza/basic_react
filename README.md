@@ -39,3 +39,8 @@ This project is based on the excellent course "Learn React for Modern Web Applic
 
 - Inheritance and Composition (don't do inheritance!)
 - SRP in React
+- Anti-Patterns (bad smells)
+  - Using props instead of props destructuring
+  - Multi-function rendering over sub-components
+  - Using index as key in lists
+  - Using single object to hold state instead of multiple state hooks
