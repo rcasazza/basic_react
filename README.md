@@ -34,3 +34,7 @@ This project is based on the excellent course "Learn React for Modern Web Applic
 - Class-based components
 - Use-state within class-based components
 - Lifecycle events in class-based components
+
+## Clean React Code
+
+- Inheritance and Composition (don't do inheritance!)
