@@ -46,6 +46,6 @@ This project is based on the excellent course "Learn React for Modern Web Applic
   - Using index as key in lists
   - Using single object to hold state instead of multiple state hooks
 
-  ## Advance React
+## Advance React
 
-  - Using Context in a component hierarchy
+- Using Context in a component hierarchy
