@@ -61,3 +61,4 @@ This project is based on the excellent course "Learn React for Modern Web Applic
 
 - Netlify
 - AWS S3
+- Firebase
