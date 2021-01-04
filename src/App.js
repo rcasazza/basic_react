@@ -4,51 +4,54 @@ import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage, ProtectedPag
 import { NavBar } from './NavBar';
 import { FormsNavBar } from './FormsNavBar';
 import { UserDataLoader } from './UserDataLoader';
+import { ThemeContext } from './ThemeContext';
 import './App.css';
 
 function App() {
 
   return (
-    <div className="App">
-      <Router>
-        <NavBar />
-        <div className="App-header">
-          <Switch>
-            <Route path="/" exact>
-              <HomePage />
-            </Route>
-            <Route path="/counter/:name">
-              <CounterButtonPage />
-            </Route>
-            <Route path="/people">
-              <PeopleListPage />
-            </Route>
-            <Route path="/protected">
-              <ProtectedPage />
-            </Route>
-            <Route path="/user">
-              <UserDataLoader>
-                <UserProfilePage />
-              </UserDataLoader>
-            </Route>
-            <Route path="/forms">
-              <Router>
-                <FormsNavBar />
-                <Route path="/forms/controlled">
-                  <ControlledFormPage />
-                </Route>
-                <Route path="/forms/uncontrolled">
-                  <UncontrolledFormPage />
-                </Route>
-              </Router>   
-            </Route>
-            <Route>
-              <NotFoundPage />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    </div>
+    <ThemeContext.Provider value="light">
+      <div className="App">
+        <Router>
+          <NavBar />
+          <div className="App-header">
+            <Switch>
+              <Route path="/" exact>
+                <HomePage />
+              </Route>
+              <Route path="/counter/:name">
+                <CounterButtonPage />
+              </Route>
+              <Route path="/people">
+                <PeopleListPage />
+              </Route>
+              <Route path="/protected">
+                <ProtectedPage />
+              </Route>
+              <Route path="/user">
+                <UserDataLoader>
+                  <UserProfilePage />
+                </UserDataLoader>
+              </Route>
+              <Route path="/forms">
+                <Router>
+                  <FormsNavBar />
+                  <Route path="/forms/controlled">
+                    <ControlledFormPage />
+                  </Route>
+                  <Route path="/forms/uncontrolled">
+                    <UncontrolledFormPage />
+                  </Route>
+                </Router>   
+              </Route>
+              <Route>
+                <NotFoundPage />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
