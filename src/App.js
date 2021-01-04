@@ -29,9 +29,7 @@ function App() {
                 <ProtectedPage />
               </Route>
               <Route path="/user">
-                <UserDataLoader>
-                  <UserProfilePage />
-                </UserDataLoader>
+                <UserProfilePage />
               </Route>
               <Route path="/forms">
                 <Router>
