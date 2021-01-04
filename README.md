@@ -56,3 +56,7 @@ This project is based on the excellent course "Learn React for Modern Web Applic
   - Gatsby
   - react boilerplate
   - RAZZLE
+
+## Hosting React Applications
+
+- Netlify
