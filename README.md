@@ -60,3 +60,4 @@ This project is based on the excellent course "Learn React for Modern Web Applic
 ## Hosting React Applications
 
 - Netlify
+- AWS S3

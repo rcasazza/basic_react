@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy:netlify": "npm run build && netlify deploy --dir ./build"
+    "deploy:netlify": "npm run build && netlify deploy --dir ./build",
+    "deploy:s3": "npm run build && aws s3 sync build/ s3://<my bucket>"
   },
   "eslintConfig": {
     "extends": [
