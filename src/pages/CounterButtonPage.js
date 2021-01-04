@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
-import { parse } from 'query-string';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { CounterButton } from '../CounterButton';
 import { CongratulationsMessage } from '../CongratulationsMessage';
 import { DisplayIf } from '../DisplayIf';
@@ -8,17 +7,17 @@ import { DisplayIf } from '../DisplayIf';
 // modified to need URL parameter "name" and optional query parameter "startingValue"
 export const CounterButtonPage = () => {
     const { name } = useParams();
-  
-    const location = useLocation();
-    console.log(parse(location.search));
-    const startingValue = parse(location.search).startingValue || 0;
 
-    const [numberOfClicks, setNumberOfClicks] = useState(Number(startingValue));
+    const [numberOfClicks, setNumberOfClicks] = useState(Number(localStorage.getItem('numberOfClicks')) || 0);
     const incrementClickCount = () => setNumberOfClicks(numberOfClicks + 1);
   
     const displayAlert = () => {
       alert('Hello!');
     }
+
+    useEffect(() => {
+        localStorage.setItem('numberOfClicks', numberOfClicks);
+    }, [numberOfClicks]);
   
     return (
       <>
